@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Function</title>
+  </head>
+  <script>
+    // map()
+    const numbers = [1, 2, 3];
+
+    const doubleNumArray = numbers.map((num) => {
+      return num * 2;
+    });
+
+    console.log(doubleNumArray);
+
+    // find()
+    const array1 = [5, 12, 8, 130, 44];
+
+    const found = array1.find((element) => element > 10);
+
+    console.log(found);
+
+    // findIndex()
+    const array2 = [5, 12, 8, 130, 44];
+
+    const isLargeNumber = (element) => element > 13;
+
+    console.log(array2.findIndex(isLargeNumber));
+
+    // filter()
+    const words = [
+      "spray",
+      "limit",
+      "elite",
+      "exuberant",
+      "destruction",
+      "present",
+    ];
+
+    const result = words.filter((word) => word.length > 6);
+
+    console.log(result);
+
+    // reduce()
+    const array3 = [1, 2, 3, 4];
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    console.log(reducer);
+
+    console.log(array3.reduce(reducer));
+
+    console.log(array3.reduce(reducer, 5));
+
+    // concat()
+    const array4 = ["a", "b", "c"];
+    const array5 = ["d", "e", "f"];
+    const array6 = array4.concat(array5);
+
+    console.log(array6);
+
+    // slice()
+    const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+    console.log(animals.slice(2));
+    // expected output: Array ["camel", "duck", "elephant"]
+
+    console.log(animals.slice(2, 4));
+    // expected output: Array ["camel", "duck"]
+
+    console.log(animals.slice(1, 5));
+    // expected output: Array ["bison", "camel", "duck", "elephant"]
+
+    console.log(animals.slice(-2));
+    // expected output: Array ["duck", "elephant"]
+
+    console.log(animals.slice(2, -1));
+    // expected output: Array ["camel", "duck"]
+
+    // splice()
+    const months = ["Jan", "March", "April", "June"];
+    months.splice(1, 0, "Feb");
+    // inserts at index 1
+    console.log(months);
+    // expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+    months.splice(4, 1, "May");
+    // replaces 1 element at index 4
+    console.log(months);
+    // expected output: Array ["Jan", "Feb", "March", "April", "May"]
+  </script>
+  <body></body>
+</html>

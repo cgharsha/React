@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread and Rest Operators</title>
+  </head>
+  <script>
+    // Spread - Used to split up array elements or object properties
+    // const newArray = [..oldArray, 1, 2];
+    // const newObject = {...oldObject, newProp:5};
+    // * oldObject newProp will be over written by new one
+
+    // Rest - Used to merge a list of function arguments into an array
+    // function sortArgs(...args){
+    //     return args.sort();
+    // }
+    const numbers = [1, 2, 3];
+    const newNumbers = [...numbers, 4];
+
+    console.log(newNumbers);
+
+    const person = {
+        name: 'Harsha',
+        gender: 'male'
+    }
+
+    const newPerson = {
+        ...person,
+        age: 33
+    }
+
+    console.log(newPerson);
+
+    const filter = (...args) => {
+        return args.filter(el => el === 1);
+    }
+
+    console.log(filter(1, 2, 3));
+  </script>
+  <body></body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes - Simple Example</title>
+  </head>
+  <script>
+    class Human {
+      constructor() {
+        this.gender = "male";
+      }
+
+      printGender() {
+        console.log(this.gender);
+      }
+    }
+
+    class Person extends Human {
+      constructor() {
+        super();
+        this.name = "Harsha";
+        this.gender = "female";
+      }
+
+      printMyName() {
+        console.log(this.name);
+      }
+    }
+
+    const person = new Person();
+    person.printMyName();
+    person.printGender();
+  </script>
+  <body></body>
+</html>

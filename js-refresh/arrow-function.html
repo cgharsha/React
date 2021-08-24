@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <script>
+    function printMyName(name) {
+      console.log(name);
+    }
+
+    printMyName("Harsha");
+
+    const printMyNameAF = (name, age) => {
+      console.log(name, age);
+    };
+
+    printMyNameAF("Harsha", 33);
+
+    const multiply = (number) => {
+      return number * 3;
+    };
+    // Short Hand for Above funtion
+    const multiplyNum = (number) => number * 2;
+
+    console.log(multiply(2));
+    console.log(multiplyNum(2));
+
+    const numbers = [1, 2, 3];
+
+    const doubleNumArray = numbers.map((num) => {
+      return num * 2
+    });
+
+    console.log(doubleNumArray)
+  </script>
+  <body></body>
+</html>
