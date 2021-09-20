@@ -1,0 +1,28 @@
+// @import '~reset-css/sass/_reset.scss';
+@import '~reset-css/sass/reset.scss';
+@import "./design-tokens/scss-variables.scss";
+@import "./design-tokens/css-variables.scss";
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+  background-color: none !important;
+}
+
+
+html,
+body {
+  height: 100%;
+  font-family: $regularFont;
+  background: var(--theme-background);
+  background: var(--color-primary);
+  color: var(--theme-color);
+  transition: all ease-in-out 400ms;
+  transition: all ease-in-out 100ms;
+}

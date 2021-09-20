@@ -1,0 +1,6 @@
+https://academind.com/tutorials/rest-vs-graphql
+https://academind.com/tutorials/hide-javascript-code
+https://academind.com/tutorials/this-keyword-function-references
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+https://academind.com/tutorials/reference-vs-primitive-values
+
