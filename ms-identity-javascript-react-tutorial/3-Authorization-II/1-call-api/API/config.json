@@ -1,0 +1,22 @@
+{
+    "credentials": {
+        "tenantID": "051aeb51-408b-403b-b95c-4ff3b303a08a",
+        "clientID": "3d323a3f-422c-4974-a03b-fd6494f0dfcc"
+    },
+    "metadata": {
+        "authority": "login.microsoftonline.com",
+        "discovery": ".well-known/openid-configuration",
+        "version": "v2.0"
+    },
+    "settings": {
+        "validateIssuer": true,
+        "passReqToCallback": false,
+        "loggingLevel": "info"
+    },
+    "protectedRoutes": {
+        "hello": {
+            "endpoint": "/hello",
+            "scopes": ["access_as_user"]
+        }
+    }
+}
