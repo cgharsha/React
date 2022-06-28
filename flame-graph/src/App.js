@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import "./App.css";
+import FlameChart from "./FlameChart";
+import AutoSizer from "react-virtualized-auto-sizer";
+
 
 function App() {
+  const [jsonData, setjsonData] = useState(null)
+
+  const loadData = () => {
+    fetch('/data.json').then(response => response.json()).then(data => setjsonData(data))
+  }
+
+  if(jsonData === null){
+    return (
+      <button onClick={loadData}>Load Data</button>
+    )
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AutoSizer>
+        {({height, width}) => (<FlameChart data={jsonData} height={height} width={width} />)}
+      
+      </AutoSizer>
     </div>
   );
 }
