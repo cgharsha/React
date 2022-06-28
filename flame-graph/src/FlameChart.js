@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { FixedSizeList as List } from "react-window";
 import convertData from "./utils";
 
-const FlameChart = ({ data, height, width }) => {
+const FlameChart = React.memo(({ data, height, width }) => {
   //   const listData = convertData(data);
   const listData = useMemo(() => {
     return convertData(data);
@@ -61,7 +61,7 @@ const FlameChart = ({ data, height, width }) => {
       {ListItem}
     </List>
   );
-};
+});
 
 const ListItem = React.memo((props) => {
   const { data, index, style } = props;
